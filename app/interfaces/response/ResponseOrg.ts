@@ -1,0 +1,30 @@
+export interface ResponseOrg {
+  id: number;
+  name: string;
+  subdomain: string;
+  domain: string;
+  latitude: number;
+  longitude: number;
+  telephone: string;
+  address: string;
+  min_price: number;
+  max_price: 800000000;
+  image: '20230928112643.jpg';
+  is_momo_ecommerce_enable: true;
+  is_moba_register_requested: true;
+  opening_status: true;
+  created_at: '2022-05-21 02:11:55';
+  updated_at: '2024-01-03 15:18:12';
+  province_code: 92;
+  district_code: 916;
+  ward_code: 31141;
+  priority: 0;
+  timezone: null;
+  is_demo: false;
+  description: 'Spa ABC xin kính chào quý khách. Spa ABC ở đây để giải quyết mọi khó khăn ABC của quý khách. Đen thành trắng ; trắng thành đen.';
+  mc_user_id: 325;
+  full_address: 'Nguyễn Việt Hồng; Phường An Phú; Quận Ninh Kiều; Thành phố Cần Thơ';
+  image_url: 'https://demo.myspa.vn/files/demo/avatar/20230928112643.jpg';
+  is_favorite: false;
+  location: '0';
+}
