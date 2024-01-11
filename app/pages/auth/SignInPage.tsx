@@ -16,6 +16,7 @@ import {
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {Button, TextInput} from 'react-native-paper';
+import {DEMO, DEMO_USERNAME, DEMO_PASSWORD} from '@env';
 
 export const SignInPage: FC = () => {
   const {
@@ -27,9 +28,9 @@ export const SignInPage: FC = () => {
     formState: {errors},
   } = useForm({
     defaultValues: {
-      subdomain: __DEV__ ? 'demo' : '',
-      username: __DEV__ ? 'minhmyspa@myspa.vn' : '',
-      password: __DEV__ ? 'Toan@06011998' : '',
+      subdomain: __DEV__ ? DEMO : '',
+      username: __DEV__ ? DEMO_USERNAME : '',
+      password: __DEV__ ? DEMO_PASSWORD : '',
     },
   });
   const [hidePass, setHidePass] = useState(true);
