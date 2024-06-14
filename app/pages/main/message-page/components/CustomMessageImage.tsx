@@ -13,7 +13,7 @@ export const CustomMessageImage: FC<{media: any}> = ({media}) => {
       {media.map((i: any) => (
         <View key={i} style={style.mediaImgCnt}>
           <FastImage
-            source={{uri: i}}
+            source={{uri: i, cache: FastImage.cacheControl.cacheOnly}}
             defaultSource={img.imgPlaceholder}
             style={style.mediaImg}
           />

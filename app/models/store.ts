@@ -6,6 +6,7 @@ import OrganizationModel from './OrganizationModel';
 import AuthModel from './AuthModel';
 import TopicModel from './TopicModel';
 import MessageModel from './MessageModel';
+import MediaModel from './MediaModel';
 
 const RootStoreModel = types.model('RootStore', {
   authModel: types.optional(AuthModel, {} as any),
@@ -13,6 +14,7 @@ const RootStoreModel = types.model('RootStore', {
   organizationModel: types.optional(OrganizationModel, {} as any),
   topicModel: types.optional(TopicModel, {} as any),
   messageModel: types.optional(MessageModel, {} as any),
+  mediaModel: types.optional(MediaModel, {} as any),
 });
 
 export const rootStore = RootStoreModel.create({});

@@ -18,6 +18,7 @@ import PriMicrophone from './primary/microphone.svg';
 import PriPicture from './primary/picture.svg';
 import PriCamera from './primary/camera.svg';
 import PriMic from './primary/mic.svg';
+import TrashWhite from './trash-white.svg';
 
 const SvgJs = {
   PriMenu,
@@ -40,5 +41,6 @@ const SvgJs = {
   PriPicture,
   PriCamera,
   PriMic,
+  TrashWhite,
 };
 export default SvgJs;

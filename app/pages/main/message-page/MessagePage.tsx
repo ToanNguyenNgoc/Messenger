@@ -44,6 +44,7 @@ export const MessagePage: FC<StackScreenProps<NavigatorParamList, 'message'>> =
   observer(({route}) => {
     const {topic, topic_id} = route.params;
     const {authModel} = useStores();
+    const [paddingMsg, setPaddingMsg] = useState(ToolBarHeight - 12);
     const insets = useSafeAreaInsets();
     const users = useMemo(
       () => uniqueBy(topic.topic_user, item => item.user_id),
@@ -94,10 +95,12 @@ export const MessagePage: FC<StackScreenProps<NavigatorParamList, 'message'>> =
           loadEarlier
           infiniteScroll
           scrollToBottom
-          onLoadEarlier={() => fetchNextPage()}
+          onLoadEarlier={() =>
+            messages.length < total ? fetchNextPage() : null
+          }
           messages={messages}
           messagesContainerStyle={{
-            paddingBottom: ToolBarHeight - 12,
+            paddingBottom: paddingMsg,
             backgroundColor: color.white,
           }}
           renderLoadEarlier={() => (
@@ -124,6 +127,7 @@ export const MessagePage: FC<StackScreenProps<NavigatorParamList, 'message'>> =
             <CustomInputToolbar
               {...props}
               setMessages={setMessages}
+              setPaddingMsg={setPaddingMsg}
               topic_id={topic_id}
             />
           )}
